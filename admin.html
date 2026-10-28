@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>RideEasy | Admin Portal</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="site-header">
+
+    <a class="logo" href="index.html">
+        Ride<span>Easy</span>
+    </a>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="explore.html">Vehicles</a>
+        <a href="compare.html">Compare</a>
+        <a href="bookings.html">My Bookings</a>
+        <a href="track-booking.html">Track Booking</a>
+        <a class="active" href="admin.html">Admin</a>
+    </nav>
+
+</header>
+
+
+<main class="admin-main">
+
+    <!-- ADMIN HEADING -->
+
+    <section class="page-heading">
+
+        <p class="eyebrow">RIDEEASY MANAGEMENT</p>
+
+        <h1>Admin Portal</h1>
+
+        <p>
+            Manage vehicles, maintenance records,
+            customer requests and reviews.
+        </p>
+
+    </section>
+
+
+    <!-- DASHBOARD CARDS -->
+
+    <section class="admin-stats">
+
+        <div class="admin-stat-card">
+            <span>Total Vehicles</span>
+            <strong>16</strong>
+            <p>Available vehicles</p>
+        </div>
+
+        <div class="admin-stat-card">
+            <span>Active Bookings</span>
+            <strong>08</strong>
+            <p>Current rentals</p>
+        </div>
+
+        <div class="admin-stat-card">
+            <span>Maintenance</span>
+            <strong>03</strong>
+            <p>Vehicles under service</p>
+        </div>
+
+        <div class="admin-stat-card">
+            <span>Requests</span>
+            <strong>05</strong>
+            <p>Customer requests</p>
+        </div>
+
+    </section>
+
+
+    <!-- ADD VEHICLE -->
+
+    <section class="admin-section">
+
+        <div class="admin-section-heading">
+
+            <div>
+                <p class="eyebrow">VEHICLE MANAGEMENT</p>
+                <h2>Add Vehicle</h2>
+            </div>
+
+        </div>
+
+
+        <div class="admin-form-box">
+
+            <form>
+
+                <div class="admin-form-grid">
+
+                    <div>
+                        <label for="vehicle-name">
+                            Vehicle Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="vehicle-name"
+                            placeholder="e.g. Hyundai Creta"
+                        >
+                    </div>
+
+
+                    <div>
+                        <label for="vehicle-category">
+                            Category
+                        </label>
+
+                        <select id="vehicle-category">
+
+                            <option>Select Category</option>
+                            <option>Hatchback</option>
+                            <option>Sedan</option>
+                            <option>SUV</option>
+                            <option>Bike</option>
+                            <option>Scooter</option>
+
+                        </select>
+                    </div>
+
+
+                    <div>
+                        <label for="vehicle-price">
+                            Price Per Day
+                        </label>
+
+                        <input
+                            type="number"
+                            id="vehicle-price"
+                            placeholder="₹ Price"
+                        >
+                    </div>
+
+
+                    <div>
+                        <label for="vehicle-status">
+                            Vehicle Status
+                        </label>
+
+                        <select id="vehicle-status">
+
+                            <option>Available</option>
+                            <option>Booked</option>
+                            <option>Maintenance</option>
+
+                        </select>
+                    </div>
+
+                </div>
+
+
+                <div>
+                    <label for="vehicle-image">
+                        Vehicle Image URL
+                    </label>
+
+                    <input
+                        type="text"
+                        id="vehicle-image"
+                        placeholder="Enter image URL"
+                    >
+                </div>
+
+
+                <button type="submit" class="button">
+                    + Add Vehicle
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+    <!-- VEHICLE LIST -->
+
+    <section class="admin-section">
+
+        <div class="admin-section-heading">
+
+            <div>
+                <p class="eyebrow">CURRENT VEHICLES</p>
+                <h2>Vehicle Records</h2>
+            </div>
+
+        </div>
+
+
+        <div class="admin-table-wrapper">
+
+            <table class="admin-table">
+
+                <thead>
+
+                    <tr>
+                        <th>Vehicle</th>
+                        <th>Category</th>
+                        <th>Price / Day</th>
+                        <th>Status</th>
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>Maruti Swift</td>
+                        <td>Hatchback</td>
+                        <td>₹1,500</td>
+                        <td>
+                            <span class="status available">
+                                Available
+                            </span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Honda City</td>
+                        <td>Sedan</td>
+                        <td>₹2,500</td>
+                        <td>
+                            <span class="status booked">
+                                Booked
+                            </span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Hyundai Creta</td>
+                        <td>SUV</td>
+                        <td>₹2,800</td>
+                        <td>
+                            <span class="status available">
+                                Available
+                            </span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Classic 350</td>
+                        <td>Bike</td>
+                        <td>₹1,200</td>
+                        <td>
+                            <span class="status maintenance">
+                                Maintenance
+                            </span>
+                        </td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+
+    <!-- MAINTENANCE -->
+
+    <section class="admin-section">
+
+        <div class="admin-section-heading">
+
+            <div>
+                <p class="eyebrow">VEHICLE SERVICE</p>
+                <h2>Maintenance Records</h2>
+            </div>
+
+        </div>
+
+
+        <div class="admin-table-wrapper">
+
+            <table class="admin-table">
+
+                <thead>
+
+                    <tr>
+                        <th>Vehicle</th>
+                        <th>Maintenance</th>
+                        <th>Date</th>
+                        <th>Status</th>
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>Classic 350</td>
+                        <td>Engine Service</td>
+                        <td>25 Oct 2026</td>
+                        <td>
+                            <span class="status maintenance">
+                                In Service
+                            </span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Honda City</td>
+                        <td>Brake Check</td>
+                        <td>24 Oct 2026</td>
+                        <td>
+                            <span class="status available">
+                                Completed
+                            </span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Hyundai Creta</td>
+                        <td>Oil Change</td>
+                        <td>22 Oct 2026</td>
+                        <td>
+                            <span class="status available">
+                                Completed
+                            </span>
+                        </td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+
+    <!-- CUSTOMER REQUESTS -->
+
+    <section class="admin-section">
+
+        <div class="admin-section-heading">
+
+            <div>
+                <p class="eyebrow">CUSTOMER SUPPORT</p>
+                <h2>Customer Requests</h2>
+            </div>
+
+        </div>
+
+
+        <div class="admin-table-wrapper">
+
+            <table class="admin-table">
+
+                <thead>
+
+                    <tr>
+                        <th>Customer</th>
+                        <th>Request</th>
+                        <th>Date</th>
+                        <th>Status</th>
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>Rahul Sharma</td>
+                        <td>Change pickup location</td>
+                        <td>26 Oct 2026</td>
+                        <td>
+                            <span class="status booked">
+                                Pending
+                            </span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Ananya Singh</td>
+                        <td>Booking cancellation</td>
+                        <td>25 Oct 2026</td>
+                        <td>
+                            <span class="status maintenance">
+                                Open
+                            </span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Aman Kumar</td>
+                        <td>Vehicle availability</td>
+                        <td>24 Oct 2026</td>
+                        <td>
+                            <span class="status available">
+                                Resolved
+                            </span>
+                        </td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+
+    <!-- CUSTOMER REVIEWS -->
+
+    <section class="admin-section">
+
+        <div class="admin-section-heading">
+
+            <div>
+                <p class="eyebrow">CUSTOMER FEEDBACK</p>
+                <h2>Customer Reviews</h2>
+            </div>
+
+        </div>
+
+
+        <div class="review-grid">
+
+            <article class="review-card">
+
+                <div class="review-top">
+                    <strong>Rahul Sharma</strong>
+                    <span>★★★★★</span>
+                </div>
+
+                <p class="review-vehicle">
+                    Maruti Swift
+                </p>
+
+                <p>
+                    Very good vehicle and the booking process
+                    was simple and convenient.
+                </p>
+
+                <small>
+                    25 October 2026
+                </small>
+
+            </article>
+
+
+            <article class="review-card">
+
+                <div class="review-top">
+                    <strong>Ananya Singh</strong>
+                    <span>★★★★☆</span>
+                </div>
+
+                <p class="review-vehicle">
+                    Honda City
+                </p>
+
+                <p>
+                    Comfortable car and a good option for
+                    long-distance travel.
+                </p>
+
+                <small>
+                    24 October 2026
+                </small>
+
+            </article>
+
+
+            <article class="review-card">
+
+                <div class="review-top">
+                    <strong>Aman Kumar</strong>
+                    <span>★★★★★</span>
+                </div>
+
+                <p class="review-vehicle">
+                    Hyundai Creta
+                </p>
+
+                <p>
+                    Great experience. The vehicle was clean
+                    and comfortable.
+                </p>
+
+                <small>
+                    23 October 2026
+                </small>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+</main>
+
+
+<footer>
+
+    <a class="logo footer-logo" href="index.html">
+        Ride<span>Easy</span>
+    </a>
+
+    <p>Project By:-</p>
+    <p>Dhairya Gupta</p>
+    <p>Madhavi Salaria</p>
+    <p>Aatif Shams Tak</p>
+
+</footer>
+
+</body>
+</html>

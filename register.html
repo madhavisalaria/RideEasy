@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>RideEasy | Register</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header and Navigation -->
+    <header class="site-header">
+
+        <a class="logo" href="index.html">
+            Ride<span>Easy</span>
+        </a>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="explore.html">Vehicles</a>
+            <a href="login.html">Login</a>
+        </nav>
+
+    </header>
+
+    <!-- Registration Section -->
+    <main class="register-wrap">
+
+        <form
+            class="form-box register-box"
+            action="login.html"
+            method="get"
+        >
+
+            <p class="eyebrow">JOIN RIDE EASY</p>
+
+            <h1>Create your account</h1>
+
+            <p class="muted">
+                Enter a few details to get started.
+            </p>
+
+            <!-- Full Name -->
+            <label for="name">Full name</label>
+
+            <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Your full name"
+                required
+            >
+
+            <!-- Email Address -->
+            <label for="email">Email address</label>
+
+            <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="you@example.com"
+                required
+            >
+
+            <!-- Phone Number -->
+            <label for="phone">Phone number</label>
+
+            <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="10-digit phone number"
+                pattern="[0-9]{10}"
+                required
+            >
+
+            <!-- Password -->
+            <label for="password">Create password</label>
+
+            <input
+                type="password"
+                id="password"
+                name="password"
+                minlength="6"
+                placeholder="At least 6 characters"
+                required
+            >
+
+            <!-- Create Account Button -->
+            <button
+                type="submit"
+                class="button form-button"
+            >
+                Create account
+            </button>
+
+
+            <!-- Login Link -->
+            <p class="register-line">
+                Already registered?
+                <a href="login.html">Login</a>
+            </p>
+
+        </form>
+
+    </main>
+
+    <footer>
+    <a class="logo footer-logo" href="index.html">Ride<span>Easy</span></a>
+    <p>Project By:-</p>
+    <p>Dhairya Gupta</p>
+    <p>Madhavi Salaria</p>
+    <p>Aatif Shams Tak</p>
+    </footer>
+
+</body>
+</html>

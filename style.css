@@ -1,0 +1,1367 @@
+
+/* =========================================
+   RIDEEASY — Editorial Automotive Design
+   HTML + CSS only
+========================================= */
+
+:root{
+    --navy: #20231f;
+    --blue: #e45f32;
+    --light-blue: #f0eee5;
+    --text: #252721;
+    --muted: #77786f;
+    --white: #fffdf7;
+    --background: #f5f2e9;
+    --border: #dedbd0;
+    --lime: #d9f36a;
+    --orange-dark: #bd4724;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--background);
+    color: var(--text);
+    line-height: 1.65;
+}
+
+img{
+    display: block;
+    max-width: 100%;
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+p{
+    margin-top: 0;
+}
+
+::selection{
+    color: var(--navy);
+    background: var(--lime);
+}
+
+/* HEADER */
+
+.site-header{
+    background: var(--background);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    padding: 22px 7%;
+    border-bottom: 1px solid var(--border);
+}
+
+.logo{
+    color: var(--navy);
+    font-size: 28px;
+    font-weight: 900;
+    letter-spacing: -1.8px;
+}
+
+.logo span{
+    color: var(--blue);
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    flex-wrap: wrap;
+}
+
+nav a{
+    color: var(--text);
+    font-size: 13px;
+    font-weight: bold;
+    transition: color 0.2s ease;
+}
+
+nav a:hover,
+nav a.active{
+    color: var(--blue);
+}
+
+.nav-button{
+    background: var(--navy);
+    color: var(--white);
+    padding: 11px 19px;
+    border: 1px solid var(--navy);
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.nav-button:hover{
+    background: var(--lime);
+    color: var(--navy);
+}
+
+/* HOME HERO */
+
+.hero{
+    display: flex;
+    align-items: center;
+    gap: 6%;
+    padding: 70px 7% 85px;
+}
+
+.hero-text{
+    flex: 0.9;
+}
+
+.eyebrow{
+    color: var(--orange-dark);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+}
+
+.hero h1{
+    color: var(--navy);
+    font-size: clamp(42px, 5.5vw, 76px);
+    line-height: 0.99;
+    letter-spacing: -4px;
+    margin-bottom: 25px;
+    font-weight: 900;
+}
+
+.hero h1 span{
+    color: var(--blue);
+}
+
+.hero-description{
+    max-width: 440px;
+    color: var(--muted);
+    font-size: 16px;
+    line-height: 1.9;
+}
+
+.hero-actions{
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.button{
+    display: inline-block;
+    background: var(--blue);
+    color: white;
+    border: 1px solid var(--blue);
+    padding: 14px 23px;
+    font-size: 13px;
+    font-weight: bold;
+    font-family: inherit;
+    text-align: center;
+    cursor: pointer;
+    transition: background 0.2s ease,
+                color 0.2s ease,
+                transform 0.2s ease;
+}
+
+.button:hover{
+    background: var(--orange-dark);
+    border-color: var(--orange-dark);
+    transform: translateY(-2px);
+}
+
+.text-link{
+    color: var(--navy);
+    font-size: 13px;
+    font-weight: bold;
+    border-bottom: 1px solid var(--blue);
+    padding-bottom: 3px;
+}
+
+.text-link:hover{
+    color: var(--blue);
+}
+
+/* HERO STATISTICS */
+
+.hero-stats{
+    display: flex;
+    gap: 35px;
+    margin-top: 42px;
+    flex-wrap: wrap;
+}
+
+.hero-stats div{
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-stats strong{
+    color: var(--navy);
+    font-size: 25px;
+    letter-spacing: -1px;
+}
+
+.hero-stats span{
+    color: var(--muted);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.7px;
+}
+
+/* HERO IMAGE */
+
+.hero-image{
+    flex: 1.1;
+    position: relative;
+}
+
+.hero-image img{
+    width: 100%;
+    height: 460px;
+    object-fit: cover;
+    border-radius: 2px;
+}
+
+.image-note{
+    position: absolute;
+    bottom: 20px;
+    left: -18px;
+    background: var(--lime);
+    color: var(--navy);
+    padding: 13px 18px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.note-dot{
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background: var(--orange-dark);
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+/* GENERAL SECTIONS */
+
+.section,
+.steps-section{
+    padding: 75px 7%;
+}
+
+.section{
+    background: var(--white);
+}
+
+.section-heading{
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 35px;
+}
+
+.section-heading h2,
+.steps-section h2{
+    color: var(--navy);
+    font-size: clamp(28px, 3vw, 42px);
+    line-height: 1.1;
+    letter-spacing: -1.5px;
+    margin-bottom: 0;
+}
+
+/* VEHICLE CARDS */
+
+.vehicle-grid{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 26px;
+}
+
+.vehicle-card{
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    overflow: hidden;
+    transition: transform 0.25s ease,
+                border-color 0.25s ease;
+}
+
+.vehicle-card:hover{
+    transform: translateY(-5px);
+    border-color: var(--blue);
+}
+
+.vehicle-card img{
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    transition: transform 0.35s ease;
+}
+
+.vehicle-card:hover img{
+    transform: scale(1.035);
+}
+
+.vehicle-card-content{
+    padding: 22px;
+}
+
+.vehicle-card h3{
+    color: var(--navy);
+    font-size: 20px;
+    letter-spacing: -0.5px;
+    margin-bottom: 8px;
+}
+
+.vehicle-card p{
+    color: var(--muted);
+    font-size: 13px;
+    margin-bottom: 17px;
+}
+
+.vehicle-card-content > a:not(.button){
+    color: var(--orange-dark);
+    font-size: 13px;
+    font-weight: bold;
+}
+
+/* HOW IT WORKS */
+
+.steps-section{
+    background: var(--light-blue);
+}
+
+.steps-grid{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1px;
+    margin-top: 35px;
+    background: var(--border);
+    border: 1px solid var(--border);
+}
+
+.step{
+    background: var(--light-blue);
+    padding: 30px;
+}
+
+.step span{
+    display: inline-block;
+    color: var(--navy);
+    background: var(--lime);
+    padding: 5px 10px;
+    font-size: 11px;
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+
+.step h3{
+    color: var(--navy);
+    font-size: 19px;
+    margin-bottom: 10px;
+}
+
+.step p{
+    color: var(--muted);
+    font-size: 13px;
+    margin-bottom: 0;
+}
+
+/* FOOTER */
+
+footer{
+    background: var(--navy);
+    color: #f5f2e9;
+    text-align: center;
+    padding: 38px 20px;
+}
+
+footer p{
+    font-size: 13px;
+    margin: 5px 0;
+}
+
+footer small{
+    font-size: 11px;
+    color: #c4c6b9;
+}
+
+.footer-logo{
+    color: white;
+    display: inline-block;
+    margin-bottom: 8px;
+}
+
+/* INNER PAGES */
+
+.page-main{
+    width: 86%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 55px 0 80px;
+}
+
+.page-heading{
+    text-align: center;
+    margin: 10px 0 50px;
+}
+
+.page-heading h1{
+    color: var(--navy);
+    font-size: clamp(34px, 4vw, 54px);
+    letter-spacing: -2px;
+    line-height: 1.1;
+    margin-bottom: 14px;
+}
+
+.page-heading > p:last-child{
+    color: var(--muted);
+}
+
+
+
+
+
+
+
+/* VEHICLE LABELS AND PRICES */
+
+
+
+
+
+
+
+
+
+
+
+
+
+.small-button{
+    padding: 10px 14px;
+    font-size: 12px;
+}
+
+/* BOOKING PAGE */
+
+.narrow-main{
+    max-width: 950px;
+}
+
+.booking-layout{
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 25px;
+    align-items: start;
+}
+
+.booking-summary{
+    background: var(--navy);
+    color: var(--white);
+    padding: 30px;
+    border-radius: 2px;
+}
+
+.booking-summary .eyebrow{
+    color: var(--lime);
+}
+
+.booking-summary h2{
+    font-size: 27px;
+    line-height: 1.2;
+    margin-bottom: 12px;
+}
+
+.summary-price{
+    font-size: 21px;
+    font-weight: bold;
+    color: var(--lime);
+}
+
+.summary-note{
+    color: #d5d6ca;
+    font-size: 13px;
+    margin-top: 25px;
+}
+
+.booking-summary .text-link{
+    color: var(--lime);
+}
+
+/* FORMS */
+
+.form-box{
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    padding: 30px;
+}
+
+.form-box label{
+    display: block;
+    color: var(--navy);
+    font-size: 12px;
+    font-weight: bold;
+    margin: 17px 0 7px;
+}
+
+.form-box input,
+.form-box select{
+    display: block;
+    width: 100%;
+    padding: 13px;
+    font-family: inherit;
+    font-size: 14px;
+    color: var(--text);
+    background: #fffefa;
+    border: 1px solid #d5d2c8;
+    border-radius: 2px;
+}
+
+.form-box input:focus,
+.form-box select:focus{
+    outline: 2px solid var(--lime);
+    border-color: var(--navy);
+}
+
+.form-row{
+    display: flex;
+    gap: 15px;
+}
+
+.form-row div{
+    flex: 1;
+    min-width: 0;
+}
+
+.form-button{
+    width: 100%;
+    margin-top: 24px;
+}
+
+.form-note,
+.muted{
+    color: var(--muted);
+    font-size: 12px;
+    margin: 15px 0 0;
+}
+
+/* CONFIRMATION CONTENT, IF USED */
+
+.confirmation-card{
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    padding: 32px;
+}
+
+.success-mark{
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--lime);
+    color: var(--navy);
+    font-size: 23px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.confirmation-card h2{
+    color: var(--navy);
+}
+
+.confirmation-card > p{
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.booking-details{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 25px;
+    border-top: 1px solid var(--border);
+}
+
+.booking-details div{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 15px 10px 15px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.booking-details span{
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.booking-details strong{
+    color: var(--navy);
+    font-size: 14px;
+    overflow-wrap: anywhere;
+}
+
+/* LOGIN PAGE */
+
+.login-page{
+    min-height: 100vh;
+}
+
+.login-layout{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 600px;
+    padding: 35px 7%;
+    gap: 35px;
+}
+
+.login-visual{
+    position: relative;
+    min-height: 480px;
+    overflow: hidden;
+    background: var(--navy);
+}
+
+.login-visual img{
+    width: 100%;
+    height: 100%;
+    min-height: 480px;
+    object-fit: cover;
+    display: block;
+    opacity: 0.75;
+}
+
+.login-visual div{
+    position: absolute;
+    left: 30px;
+    right: 30px;
+    bottom: 25px;
+    color: white;
+}
+
+.login-visual .eyebrow{
+    color: var(--lime);
+}
+
+.login-visual h1{
+    font-size: 36px;
+    line-height: 1.1;
+    margin-bottom: 12px;
+}
+
+.login-visual p:last-child{
+    color: #f0eee5;
+}
+
+.login-form-area{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-box{
+    width: 100%;
+    max-width: 440px;
+}
+
+.login-box h2{
+    color: var(--navy);
+    font-size: 32px;
+    margin-bottom: 5px;
+}
+
+.register-line{
+    text-align: center;
+    color: var(--muted);
+    font-size: 13px;
+    margin: 20px 0 0;
+}
+
+.register-line a{
+    color: var(--orange-dark);
+    font-weight: bold;
+}
+
+/* REGISTRATION PAGE */
+
+.register-wrap{
+    width: 90%;
+    max-width: 500px;
+    margin: 50px auto 70px;
+}
+
+.register-box h1{
+    color: var(--navy);
+    font-size: 34px;
+    letter-spacing: -1px;
+    margin-bottom: 8px;
+}
+
+/* KEYBOARD ACCESSIBILITY */
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible{
+    outline: 3px solid var(--blue);
+    outline-offset: 3px;
+}
+
+/* TABLETS */
+
+@media (max-width: 800px) {
+    .hero{
+        flex-direction: column;
+        align-items: stretch;
+        padding-top: 45px;
+    }
+
+    .hero h1{
+        font-size: 48px;
+        letter-spacing: -2px;
+    }
+
+    .hero-image img{
+        height: 340px;
+    }
+
+    .vehicle-grid,
+.steps-grid{
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .booking-layout,
+.login-layout{
+        grid-template-columns: 1fr;
+    }
+
+    .login-visual,
+.login-visual img{
+        min-height: 330px;
+    }
+
+    .login-form-area{
+        align-items: flex-start;
+    }
+}
+
+/* MOBILE PHONES */
+
+@media (max-width: 560px) {
+    .site-header{
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 18px 6%;
+    }
+
+    nav{
+        gap: 14px;
+    }
+
+    nav a{
+        font-size: 12px;
+    }
+
+    .hero,
+.section,
+.steps-section{
+        padding-left: 6%;
+        padding-right: 6%;
+    }
+
+    .hero h1{
+        font-size: 40px;
+        letter-spacing: -2px;
+    }
+
+    .hero-image img{
+        height: 270px;
+    }
+
+    .image-note{
+        left: 10px;
+        bottom: 10px;
+    }
+
+    .hero-stats{
+        gap: 22px;
+    }
+
+    .section-heading{
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .section-heading h2,
+.steps-section h2{
+        font-size: 29px;
+    }
+
+    .vehicle-grid,
+.steps-grid{
+        grid-template-columns: 1fr;
+    }
+
+    .vehicle-card img{
+        height: 220px;
+    }
+
+    .page-main{
+        width: 90%;
+        padding-top: 35px;
+    }
+
+    .page-heading h1{
+        font-size: 35px;
+    }
+
+    .form-box,
+.confirmation-card{
+        padding: 21px;
+    }
+
+    .form-row{
+        flex-direction: column;
+    }
+
+    .booking-details{
+        grid-template-columns: 1fr;
+    }
+
+    .login-layout{
+        padding: 20px 6%;
+    }
+
+    .login-visual h1{
+        font-size: 29px;
+    }
+}
+
+/* REDUCED MOTION */
+
+@media (prefers-reduced-motion: reduce) {
+    html{
+        scroll-behavior: auto;
+    }
+
+    *,
+*::before,
+*::after{
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* =========================================
+   EXPLORE VEHICLES — NEW PAGES
+   Uses the existing RideEasy colour theme
+========================================= */
+
+.explore-grid{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 26px;
+    align-items: stretch;
+}
+
+.explore-card{
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    background: var(--white);
+    border: 1px solid var(--border);
+    color: var(--text);
+    overflow: hidden;
+    transition: transform 0.25s ease,
+                border-color 0.25s ease;
+}
+
+.explore-card:hover{
+    transform: translateY(-5px);
+    border-color: var(--blue);
+}
+
+.explore-card img{
+    display: block;
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    transition: transform 0.35s ease;
+}
+
+.explore-card:hover img{
+    transform: scale(1.035);
+}
+
+.explore-card-content{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 1;
+    padding: 25px;
+}
+
+.explore-number{
+    color: var(--orange-dark);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.8px;
+    margin-bottom: 14px;
+}
+
+.explore-card h2{
+    color: var(--navy);
+    font-size: 29px;
+    line-height: 1.15;
+    letter-spacing: -1px;
+    margin-bottom: 12px;
+}
+
+.explore-card p{
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.8;
+    margin-bottom: 22px;
+}
+
+.explore-link{
+    display: inline-block;
+    margin-top: auto;
+    padding: 11px 15px;
+    background: var(--blue);
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    transition: background 0.2s ease;
+}
+
+.explore-card:hover .explore-link{
+    background: var(--orange-dark);
+}
+
+.explore-card:focus-visible{
+    outline: 3px solid var(--blue);
+    outline-offset: 4px;
+}
+
+
+
+/* Keep direct vehicle links visible below the header */
+
+
+
+/* TABLET LAYOUT */
+
+@media (max-width: 800px) {
+    .explore-grid{
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .explore-card img{
+        height: 210px;
+    }
+}
+
+/* MOBILE LAYOUT */
+
+@media (max-width: 560px) {
+    .explore-grid{
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+
+    .explore-card img{
+        height: 230px;
+    }
+
+    .explore-card-content{
+        padding: 22px;
+    }
+
+    .explore-card h2{
+        font-size: 26px;
+    }
+}
+
+/* REDUCED MOTION */
+
+@media (prefers-reduced-motion: reduce) {
+    .explore-card,
+.explore-card img,
+.explore-link{
+        transition: none;
+    }
+
+    .explore-card:hover,
+.explore-card:hover img{
+        transform: none;
+    }
+}
+/* =========================================
+   COMPARE VEHICLES
+========================================= */
+
+.compare-table-wrapper{
+    width: 100%;
+    overflow-x: auto;
+    background: var(--white);
+    border: 1px solid var(--border);
+}
+
+.compare-table{
+    width: 100%;
+    min-width: 700px;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.compare-table th{
+    background: var(--navy);
+    color: var(--white);
+    padding: 17px 20px;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.compare-table td{
+    padding: 17px 20px;
+    border-bottom: 1px solid var(--border);
+    color: var(--text);
+    font-size: 13px;
+}
+
+.compare-table tbody tr:hover{
+    background: var(--background);
+}
+
+.compare-table td:first-child{
+    color: var(--navy);
+    font-weight: bold;
+}
+
+.compare-table td:nth-child(3){
+    color: var(--orange-dark);
+    font-weight: bold;
+}
+
+.compare-table .button{
+    display: inline-block;
+    padding: 9px 13px;
+}
+
+
+/* =========================================
+   TRACK BOOKING
+========================================= */
+
+.booking-status{
+    color: var(--orange-dark) !important;
+}
+
+
+
+
+
+
+
+
+/* =========================================
+   COMPARE + TRACK BOOKING MOBILE
+========================================= */
+
+@media (max-width: 560px) {
+
+    .compare-table-wrapper{
+        overflow-x: auto;
+    }
+
+    .compare-table{
+        min-width: 650px;
+    }
+
+    .compare-table th,
+.compare-table td{
+        padding: 14px 15px;
+    }
+
+    
+
+}
+/* =========================================
+   ADMIN PORTAL
+========================================= */
+
+.admin-main{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 30px 60px;
+}
+
+
+/* ADMIN STAT CARDS */
+
+.admin-stats{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    margin: 40px 0;
+}
+
+.admin-stat-card{
+    background: var(--white);
+    border: 1px solid var(--border);
+    padding: 25px;
+}
+
+.admin-stat-card span{
+    display: block;
+    color: var(--muted);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.admin-stat-card strong{
+    display: block;
+    color: var(--navy);
+    font-size: 32px;
+    margin-bottom: 5px;
+}
+
+.admin-stat-card p{
+    color: var(--muted);
+    font-size: 13px;
+    margin: 0;
+}
+
+
+/* ADMIN SECTIONS */
+
+.admin-section{
+    margin-top: 45px;
+}
+
+.admin-section-heading{
+    margin-bottom: 20px;
+}
+
+.admin-section-heading h2{
+    color: var(--navy);
+    margin-top: 5px;
+}
+
+
+/* ADD VEHICLE FORM */
+
+.admin-form-box{
+    background: var(--white);
+    border: 1px solid var(--border);
+    padding: 30px;
+}
+
+.admin-form-box form{
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.admin-form-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+.admin-form-box label{
+    display: block;
+    margin-bottom: 8px;
+    color: var(--text);
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.admin-form-box input,
+.admin-form-box select{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 13px;
+    border: 1px solid var(--border);
+    background: var(--background);
+    color: var(--text);
+    font-size: 14px;
+}
+
+.admin-form-box input:focus,
+.admin-form-box select:focus{
+    outline: none;
+    border-color: var(--blue);
+}
+
+.admin-form-box button{
+    width: fit-content;
+    border: none;
+    cursor: pointer;
+}
+
+
+/* ADMIN TABLE */
+
+.admin-table-wrapper{
+    width: 100%;
+    overflow-x: auto;
+    background: var(--white);
+    border: 1px solid var(--border);
+}
+
+.admin-table{
+    width: 100%;
+    min-width: 700px;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.admin-table th{
+    padding: 16px 20px;
+    background: var(--navy);
+    color: var(--white);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.admin-table td{
+    padding: 16px 20px;
+    border-bottom: 1px solid var(--border);
+    color: var(--text);
+    font-size: 13px;
+}
+
+.admin-table tbody tr:hover{
+    background: var(--background);
+}
+
+
+/* STATUS */
+
+.status{
+    display: inline-block;
+    padding: 6px 10px;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.status.available{
+    background: var(--lime);
+    color: var(--navy);
+}
+
+.status.booked{
+    background: #f5d7c9;
+    color: var(--orange-dark);
+}
+
+.status.maintenance{
+    background: #eee5b9;
+    color: #6f5d17;
+}
+
+
+/* CUSTOMER REVIEWS */
+
+.review-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.review-card{
+    background: var(--white);
+    border: 1px solid var(--border);
+    padding: 25px;
+}
+
+.review-top{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.review-top strong{
+    color: var(--navy);
+}
+
+.review-top span{
+    color: var(--orange-dark);
+    letter-spacing: 2px;
+}
+
+.review-vehicle{
+    color: var(--blue);
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.review-card > p:not(.review-vehicle){
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.review-card small{
+    color: var(--muted);
+    font-size: 11px;
+}
+
+
+/* ADMIN MOBILE */
+
+@media (max-width: 800px) {
+
+    .admin-stats{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .review-grid{
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media (max-width: 560px) {
+
+    .admin-main{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .admin-stats{
+        grid-template-columns: 1fr;
+    }
+
+    .admin-form-grid{
+        grid-template-columns: 1fr;
+    }
+
+    .admin-form-box{
+        padding: 20px;
+    }
+
+}
